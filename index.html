@@ -36,7 +36,7 @@
             padding-top: 45px;
             padding-left: 8%;
             padding-right: 8%;
-        }
+        } 
 
         .logo {
             color: white;
@@ -374,22 +374,73 @@
                 font-size: 18px;
             }
         }
+
+        /* Hamburger Styles */
+.menu-icon {
+    display: none; /* Hidden by default on desktop */
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+@media screen and (max-width: 850px) {
+    .menu-icon {
+        display: block; /* Show icon on mobile */
+        /* This ensures the icon stays on the right if other elements disappear */
+        margin-left: auto; 
+        z-index: 1001;
+    }
+
+    nav ul {
+        display: flex !important; /* Override previous display: none */
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%; /* Start off-screen */
+        width: 70%;
+        height: 100vh;
+        background: #101010;
+        padding-top: 100px;
+        transition: 0.4s;
+        z-index: 1000;
+        box-shadow: -10px 0 20px rgba(0,0,0,0.5);
+    }
+
+    /* This class will be added by JavaScript */
+    nav ul.active {
+        right: 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 15px 0;
+        text-align: center;
+    }
+    
+    nav ul li a {
+        font-size: 24px;
+    }
+}
     </style>
 
 </head>
 <body>
 <div class="hero">
     <nav>
-        <!-- <h2 class="logo">Personal<span>Profile</span></h2> -->
-        <ul>
-            <li><a href="#about">About me</a></li>
-            <li><a href="#completed-sprint">Completed Sprints</a></li>
-            <li><a href="https://github.com/dev77-7/"target="_blank">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/shubham-sharma-9073211a7/"target="_blank">LinkedIn</a></li>
-            <li><a href="mailto:shubhamsharma5may@gmail.com">Email</a></li>
-        </ul>
-        <a href="https://dev77-7.github.io/shubham-sharma-portfolio" target="_blank" class="btn">Press-to-Multiply</a>
-    </nav>
+    <!-- <h2 class="logo">Academic<span>Allies</span></h2> -->
+    <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
+    <ul id="nav-list">
+        <li><a href="#about" onclick="toggleMenu()">About me</a></li>
+        <li><a href="#completed-sprint" onclick="toggleMenu()">Completed Sprints</a></li>
+        <li><a href="https://github.com/dev77-7/" target="_blank">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/shubham-sharma-9073211a7/" target="_blank">LinkedIn</a></li>
+        <li><a href="mailto:shubhamsharma5may@gmail.com">Email</a></li>
+    </ul>
+    <a href="https://dev77-7.github.io/shubham-sharma-portfolio" target="_blank" class="btn">Press-to-Multiply</a>
+</nav>
     <div class="content">
         <h4>Hello, my name is</h4>
         <h1>Shubham <span>Sharma</span></h1>
@@ -484,5 +535,14 @@
         </div>
         <p class="end">CopyRight By Shubham Sharma</p>
     </footer>
+    <script>
+    function toggleMenu() {
+        const navList = document.getElementById("nav-list");
+        // Only toggle if we are on a mobile screen
+        if (window.innerWidth <= 850) {
+            navList.classList.toggle("active");
+        }
+    }
+</script>
 </body>
 </html>
