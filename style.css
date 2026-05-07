@@ -1,0 +1,449 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+.filter-container {
+text-align: center;
+padding: 50px 8%;
+background: #101010;
+}
+.filter-btn {
+background: transparent;
+border: 1px solid #21f8e6;
+color: white;
+padding: 8px 20px;
+margin: 5px;
+cursor: pointer;
+border-radius: 20px;
+transition: 0.3s;
+}
+.filter-btn.active, .filter-btn:hover {
+background: #1cbdb0;
+}
+.card { transition: transform 0.4s, opacity 0.4s; }
+.hidden { display: none; }        
+html {
+scroll-behavior: smooth;
+}
+/* Typewriter Text Styling */
+#typewriter {
+color: #21f8e6; /* Matches 'span' theme color */
+font-weight: bold;
+}
+
+/* Blinking Cursor Effect */
+.cursor {
+color: white;
+font-weight: 200;
+animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+0%, 100% { opacity: 1; }
+50% { opacity: 0; }
+}
+.hero {
+height: 100vh;
+width: 100%;
+background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url("main-bg.png");
+background-size: cover;
+background-position: center;
+}
+
+nav {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding-top: 45px;
+padding-left: 8%;
+padding-right: 8%;
+} 
+
+.logo {
+color: white;
+font-size: 35px;
+letter-spacing: 1px;
+cursor: pointer;
+}
+
+span {
+color: #21f8e6;
+}
+
+nav ul li {
+list-style-type: none;
+display: inline-block;
+padding: 10px 25px;
+}
+
+nav ul li a {
+color: white;
+text-decoration: none;
+font-weight: bold;
+text-transform: capitalize;
+}
+
+nav ul li a:hover {
+color: #21f8e6;
+transition: color .4s;
+}
+
+.btn {
+background-color: #1acabc;
+color: white;
+text-decoration: none;
+border: 2px solid transparent;
+font-weight: bold;
+padding: 10px 25px;
+border-radius: 30px;
+transition: transform .4s;
+}
+
+.btn:hover {
+transform: scale(1.2);
+}
+
+.content {
+position: absolute;
+top: 50%;
+left: 8%;
+transform: translateY(-50%);
+}
+
+h1 {
+color: white;
+margin: 20px 0px 20px;
+font-size: 75px;
+}
+
+h3 {
+color: white;
+font-size: 25px;
+margin-bottom: 50px;
+}
+
+h4 {
+color: #fcfcfc;
+letter-spacing: 2px;
+font-size: 20px;
+}
+
+/* About section styles */
+.about {
+min-height: 100vh;
+width: 100%;
+padding: 100px 0px;
+background-color: #191919;
+}
+
+.main {
+width: 1130px;
+max-width: 95%;
+margin: 0 auto;
+display: flex;
+align-items: center;
+justify-content: space-around;
+}
+
+.about img {
+border-radius: 13%;
+height: auto;
+width: 430px;
+max-width: 100%;
+}
+
+.about-text {
+width: 550px;
+}
+
+.about-text h2 {
+color: white;
+font-size: 75px;
+text-transform: capitalize;
+margin-bottom: 20px;
+}
+
+.about-text h5 {
+color: white;
+letter-spacing: 2px;
+font-size: 22px;
+margin-bottom: 25px;
+text-transform: capitalize;
+}
+
+.about-text p {
+color: #fcfcfc;
+letter-spacing: 1px;
+line-height: 28px;
+font-size: 18px;
+margin-bottom: 45px;
+}
+
+button {
+background-color: #21f8e6;
+color: white;
+text-decoration: none;
+border: 2px solid transparent;
+font-weight: bold;
+padding: 13px 30px;
+border-radius: 30px;
+transition: .4s;
+}
+
+button:hover {
+background-color: transparent;
+border: 2px solid #21f8e6;
+cursor: pointer;
+}
+
+/* Service section styles */
+.service {
+background: #101010;
+min-height: 100vh;
+width: 100%;
+padding: 100px 0px;
+background-size: cover;
+background-position: center;
+}
+
+.title h2 {
+color: white;
+font-size: 75px;
+width: 100%;
+margin: 30px auto;
+text-align: center;
+}
+
+.box {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+}
+
+.card {
+height: 365px;
+width: 335px;
+padding: 10px 35px;
+background: #191919;
+border-radius: 20px;
+margin: 15px;
+position: relative;
+overflow: hidden;
+text-align: center;
+}
+
+.card i {
+font-size: 50px;
+display: block;
+text-align: center;
+margin: 25px 0px;
+color: #21f8e6;
+}
+
+h5 {
+color: white;
+font-size: 23px;
+margin-bottom: 15px;
+}
+
+.pra p {
+color: #fcfc;
+font-size: 16px;
+line-height: 27px;
+margin-bottom: 25px;
+}
+
+.card .button {
+background-color: #21f8e6;
+color: white;
+text-decoration: none;
+border: 2px solid transparent;
+font-weight: bold;
+padding: 9px 22px;
+border-radius: 30px;
+transition: .4s;
+}
+
+.card .button:hover {
+background-color: transparent;
+border: 2px solid #21f8e6;
+cursor: pointer;
+}
+
+/* Contact section styles */
+.contact-me {
+width: 100%;
+padding: 80px 0;
+background: #191919;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+.contact-me .button {
+background-color: #21f8e6;
+color: white;
+text-decoration: none;
+border: 2px solid transparent;
+font-weight: bold;
+padding: 9px 22px;
+border-radius: 30px;
+transition: .4s;
+}
+
+.contact-me p {
+width: 90%;
+max-width: 800px;
+font-style: italic;
+color: rgba(241, 225, 205, 255);
+font-size: 24px;
+margin-bottom: 20px;
+font-weight: bold;
+}
+
+/* Footer styles */
+footer {
+padding: 50px 0;
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+footer p {
+color: white;
+font-size: 17px;
+text-align: center;
+margin-bottom: 25px;
+}
+
+.social {
+display: flex;
+justify-content: center;
+}
+
+.social a {
+width: 45px;
+height: 45px;
+display: flex;
+align-items: center;
+justify-content: center;
+background: #21f8e6;
+border-radius: 50%;
+margin: 22px 10px;
+color: white;
+text-decoration: none;
+font-size: 20px;
+transition: .3s;
+}
+
+.end {
+color: #21f8e6;
+font-size: 14px;
+margin-top: 20px;
+}
+.about, .service, .filter-container, .social, .contact-me, .hero {
+background-color: transparent !important; /* This allows the p5 canvas to show through */
+}
+/* --- RESPONSIVE MEDIA QUERIES --- */
+
+@media screen and (max-width: 1180px) {
+.main {
+width: 100%;
+flex-direction: column;
+text-align: center;
+}
+.about-text {
+width: 90%;
+margin-top: 40px;
+}
+}
+
+@media screen and (max-width: 850px) {
+nav {
+padding-top: 30px;
+}
+nav ul {
+display: none; /* We will replace this with the hamburger later */
+}
+.btn {
+display: none; /* Hide button on small screens to save space */
+}
+h1 {
+font-size: 50px;
+}
+h3 {
+font-size: 20px;
+}
+.about-text h2, .title h2 {
+font-size: 50px;
+}
+}
+
+@media screen and (max-width: 480px) {
+h1 {
+font-size: 40px;
+}
+.about-text h2, .title h2 {
+font-size: 35px;
+}
+.contact-me p {
+font-size: 18px;
+}
+}
+
+/* Hamburger Styles */
+.menu-icon {
+display: none; /* Hidden by default on desktop */
+color: white;
+font-size: 30px;
+cursor: pointer;
+z-index: 1001;
+}
+
+@media screen and (max-width: 850px) {
+.menu-icon {
+display: block; /* Show icon on mobile */
+/* This ensures the icon stays on the right if other elements disappear */
+margin-left: auto; 
+z-index: 1001;
+}
+
+nav ul {
+display: flex !important; /* Override previous display: none */
+flex-direction: column;
+position: fixed;
+top: 0;
+right: -100%; /* Start off-screen */
+width: 70%;
+height: 100vh;
+background: #101010;
+padding-top: 100px;
+transition: 0.4s;
+z-index: 1000;
+box-shadow: -10px 0 20px rgba(0,0,0,0.5);
+}
+
+/* This class will be added by JavaScript */
+nav ul.active {
+right: 0;
+}
+
+nav ul li {
+display: block;
+margin: 15px 0;
+text-align: center;
+}
+
+nav ul li a {
+font-size: 24px;
+}
+}
