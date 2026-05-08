@@ -57,6 +57,7 @@ span {
     background: #1cbdb0;
 }
 
+
 .hidden { 
     display: none; 
 }
@@ -278,13 +279,23 @@ button:hover {
     height: 365px;
     width: 335px;
     padding: 10px 35px;
-    background: #191919;
-    border-radius: 20px;
+    /* Increased opacity to block p5.js dots and background */
+    background: rgba(25, 25, 25, 0.95) !important; 
+    /* Visible border using your cyan color */
+    border: 3px solid rgba(33, 248, 230, 0.3) !important;
+    border-radius: 50px;
     margin: 15px;
     position: relative;
     overflow: hidden;
     text-align: center;
-    transition: transform 0.4s, opacity 0.4s;
+    transition: transform 0.4s, opacity 0.4s, border-color 0.4s;
+}
+
+/* Make the border glow on hover */
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #21f8e6 !important;
+    box-shadow: 0 10px 20px rgba(33, 248, 230, 0.1);
 }
 
 .card i {
@@ -301,6 +312,8 @@ h5 {
     margin-bottom: 15px;
 }
 
+
+
 .pra p {
     color: #fcfc;
     font-size: 16px;
@@ -309,13 +322,13 @@ h5 {
 }
 
 .card .button {
-    background-color: #21f8e6;
+    background-color: #15b3a6;
     color: white;
     text-decoration: none;
     border: 2px solid transparent;
     font-weight: bold;
     padding: 9px 22px;
-    border-radius: 30px;
+    border-radius: 50px;
     transition: .4s;
 }
 
@@ -524,7 +537,7 @@ footer p {
     z-index: 1001;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1000px) {
     .menu-icon {
         display: block; 
         margin-left: auto; 

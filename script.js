@@ -67,22 +67,36 @@ class Particle {
 }
 
 // Filtering Function
-function filterSelection(c) {
-    let x = document.getElementsByClassName("card");
-    let category = c === "all" ? "" : c;
-    for (let i = 0; i < x.length; i++) {
-        x[i].classList.add("hidden");
-        if (x[i].getAttribute("data-category").indexOf(category) > -1 || category === "") {
-            x[i].classList.remove("hidden");
+function filterSelection(c, btn) {
+    // 1. Handle Card Filtering
+    let cards = document.getElementsByClassName("card");
+    let category = (c === "all") ? "" : c;
+
+    for (let i = 0; i < cards.length; i++) {
+        // Safety: Only filter cards that actually have a data-category attribute
+        let itemCategory = cards[i].getAttribute("data-category");
+        
+        if (itemCategory) {
+            cards[i].classList.add("hidden");
+            if (category === "" || itemCategory.indexOf(category) > -1) {
+                cards[i].classList.remove("hidden");
+            }
         }
+        // Cards without data-category (like Completed Sprints) stay visible
     }
-    // Update button active state
+
+    // 2. Handle Button Active State
     let btns = document.getElementsByClassName("filter-btn");
     for (let i = 0; i < btns.length; i++) {
         btns[i].classList.remove("active");
     }
-    if(event) event.currentTarget.classList.add("active");
+
+    // Add 'active' to the specific button clicked
+    if (btn) {
+        btn.classList.add("active");
+    }
 }
+
 function toggleMenu() {
     const navList = document.getElementById("nav-list");
     const body = document.body;
