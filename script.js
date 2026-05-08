@@ -83,14 +83,48 @@ function filterSelection(c) {
     }
     if(event) event.currentTarget.classList.add("active");
 }
-    function toggleMenu() {
-        const navList = document.getElementById("nav-list");
-        // Only toggle if we are on a mobile screen
-        if (window.innerWidth <= 850) {
-            navList.classList.toggle("active");
+function toggleMenu() {
+    const navList = document.getElementById("nav-list");
+    const body = document.body;
+
+    // Use the 1050px breakpoint established for the header layout
+    if (window.innerWidth <= 1050) {
+        const isActive = navList.classList.toggle("active");
+        
+        // LOCK SCROLL: Toggle a class on the body to prevent background movement
+        if (isActive) {
+            body.classList.add("no-scroll");
+        } else {
+            body.classList.remove("no-scroll");
         }
     }
-    // --- TYPEWRITER LOGIC ---
+}
+// CLOSE ON OUTSIDE CLICK: Listen for clicks across the entire document
+document.addEventListener('click', (e) => {
+    const navList = document.getElementById("nav-list");
+    const menuIcon = document.querySelector(".menu-icon");
+    
+    // If the menu is open AND the click happened outside the menu list 
+    // AND it wasn't a click on the hamburger icon itself
+    if (navList.classList.contains("active") && 
+        !navList.contains(e.target) && 
+        !menuIcon.contains(e.target)) {
+        
+        navList.classList.remove("active");
+        document.body.classList.remove("no-scroll");
+    }
+});
+
+// CLOSE ON SCROLL (Optional): For extra safety if the user manages to scroll
+window.addEventListener('scroll', () => {
+    const navList = document.getElementById("nav-list");
+    if (navList.classList.contains("active")) {
+        navList.classList.remove("active");
+        document.body.classList.remove("no-scroll");
+    }
+}, { passive: true });
+
+// --- TYPEWRITER LOGIC ---
 
 const phrases = [
     "Computer Science Engineer",
