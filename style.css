@@ -7,6 +7,18 @@
     box-sizing: border-box;
 }
 
+/* Changes the highlight color for all elements */
+::selection {
+    background-color: #21f8e6;
+    color: #000; /* Dark text usually looks better on a bright neon background */
+}
+
+/* For older versions of Firefox */
+::-moz-selection {
+    background-color: #21f8e6;
+    color: #000;
+}
+
 /* FORCE THE BODY TO BE DARK */
 body {
     background-color: #101010; /* Prevents white flashes/gaps */
