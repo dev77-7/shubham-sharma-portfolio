@@ -481,8 +481,8 @@ footer p {
         text-align: right;
         
         /* Size adjustments to prevent 'out of proportion' look */
-        padding: 10px 20px; 
-        font-size: 14px; 
+        padding: 12px 22px; 
+        font-size: 15px; 
         width: auto; /* Prevents the button from stretching to fill the flex container */
         max-width: fit-content;
         margin-left: auto; /* Pushes the button to the right edge of its flex area */
@@ -519,11 +519,12 @@ footer p {
         font-size: 20px;
     }
     .btn {
-        padding: 5px 10px;
-        font-size: 11px;
+        padding: 10px 10px;
+        font-size: 13px;
+        border-radius: 20px;
     }
     .menu-icon {
-        font-size: 22px;
+        font-size: 24px;
     }
 }
 
