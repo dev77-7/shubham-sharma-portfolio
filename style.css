@@ -442,8 +442,8 @@ footer p {
     /* 2. LOGO: Centered between the icon and button */
     .logo {
         order: 2; /* Second in visual order */
-        flex: 2; /* Takes 2/4 of the space to remain the focal point */
-        font-size: 24px; /* Scaled down for mobile */
+        flex: 1.8; /* Takes 2/4 of the space to remain the focal point */
+        font-size: 22px; /* Scaled down for mobile */
         text-align: center;
         margin: 0;
     }
@@ -452,19 +452,19 @@ footer p {
     .btn {
         display: inline-block !important;
         order: 3; /* Third in visual order */
-        flex: 1; /* Takes 1/4 of the space to balance the icon */
+        flex: 1.2; /* Takes 1/4 of the space to balance the icon */
         text-align: right;
         
         /* Size adjustments to prevent 'out of proportion' look */
-        padding: 6px 14px; 
-        font-size: 12px; 
+        padding: 10px 20px; 
+        font-size: 14px; 
         width: auto; /* Prevents the button from stretching to fill the flex container */
         max-width: fit-content;
         margin-left: auto; /* Pushes the button to the right edge of its flex area */
         
         /* Keeps 'Download CV' on a single line */
         white-space: nowrap; 
-        border-radius: 20px;
+        border-radius: 25px;
     }
 
     /* NAV DRAWER: Slides in from the left to match the hamburger position */
