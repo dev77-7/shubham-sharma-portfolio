@@ -142,8 +142,8 @@ window.addEventListener('scroll', () => {
 
 const phrases = [
     "Computer Science Engineer",
-    "Web Developer",
     "Product Manager",
+    "Computational Sustainability Enthusiast",
     "Researcher in the making"
 ];
 
