@@ -23,7 +23,7 @@
     </div>
     <ul id="nav-list">
         <li><a href="#about" onclick="toggleMenu()">About me</a></li>
-        <li><a href="#completed-sprint" onclick="toggleMenu()">Completed Sprints</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects & Research</a></li>
         <li><a href="https://github.com/dev77-7/" target="_blank">GitHub</a></li>
         <li><a href="https://www.linkedin.com/in/shubham-sharma-9073211a7/" target="_blank">LinkedIn</a></li>
         <li><a href="mailto:shubhamsharma5may@gmail.com">Email</a></li>
@@ -43,118 +43,429 @@
             <img src="about-me-main.png">
             <div class="about-text">
                 <h2>About Me</h2>
-                <h5>Tinkerer <span> & Absurdist</span></h5>
-                <p>I am a front-end web developer. I can provide clean code and pixel perfect design. I also make the website more & more interactive with web animations.</p>
+                <h5>Pragmatic Optimist <span>& Absurdist</span></span></h5>
+                <p> I enjoy exploring complex systems and understanding how technology, nature, and human behavior interact across
+                        different environments. My interests are often driven by
+                        questions around sustainability, intelligent infrastructure,
+                        and the role of computational thinking in solving practical
+                        real-world problems.
+                </p>
+                <p> In the long run, I hope to pursue research at the doctoral
+                    level and work on building systems and profitable social ventures that create
+                    meaningful social impact at scale. I tend to approach problems through
+                    curiosity, first-principles thinking, and the belief that
+                    technology becomes more valuable when it is used to improve
+                    real human and environmental outcomes across complex systems.
+                </p>
                 <a href="mailto:shubhamsharma5may@gmail.com">
                 <button type="button">Let's Talk</button></a>
             </div>
         </div>
     </section>
- <div class="filter-container" id="research-interests">
-    <h2 style="color:white; margin-bottom:20px;">Research Interests</h2>
-    <button class="filter-btn active" onclick="filterSelection('all', this)">All Projects</button>
-    <button class="filter-btn" onclick="filterSelection('sustainability', this)">Circular Economy</button>
-    <button class="filter-btn" onclick="filterSelection('ml', this)">Applied AI/CV</button>
-    <button class="filter-btn" onclick="filterSelection('systems', this)">Systems & AgriTech</button>
+ <section class="service" id="projects">
+
+    <!-- Section Heading -->
+    <div class="title">
+        <h2>Projects & Research Interests</h2>
+    </div>
+
+    <!-- =========================================================
+    FILTER BUTTONS
+    Using category filters so visitors can explore projects
+    based on research/technical domains instead of random order.
+    ========================================================= -->
+    
+    <div class="filter-container">
+
+        <button class="filter-btn active"
+            onclick="filterSelection('all', this)">
+            All Projects
+        </button>
+
+        <button class="filter-btn"
+            onclick="filterSelection('ai', this)">
+            Applied AI & CV
+        </button>
+
+        <button class="filter-btn"
+            onclick="filterSelection('sustainability', this)">
+            Sustainability
+        </button>
+
+        <button class="filter-btn"
+            onclick="filterSelection('systems', this)">
+            Systems & Backend
+        </button>
+
+        <button class="filter-btn"
+            onclick="filterSelection('data', this)">
+            Data & Geospatial
+        </button>
+
+        <button class="filter-btn"
+            onclick="filterSelection('agritech', this)">
+            AgriTech
+        </button>
+
+        <button class="filter-btn"
+            onclick="filterSelection('fintech', this)">
+            FinTech
+        </button>
+
+        <button class="filter-btn"
+            onclick="filterSelection('edtech', this)">
+            EdTech
+        </button>
+
+    </div>
+
+    <!-- =========================================================
+    PROJECT CARD CONTAINER
+    Every card now has categories attached using data-category.
+    This lets one project appear under multiple filters.
+    ========================================================= -->
+
+    <div class="box">
+<!-- =========================================================
+KULU - FINTECH PAYMENTS PLATFORM
+This project reflects cross-border fintech infrastructure
+and vendor integration systems I worked on while leading
+distributed product teams across multiple countries.
+========================================================= -->
+
+<div class="card"
+    data-category="fintech systems">
+
+    <i class="fas fa-wallet"></i>
+
+    <h5>Cross-Border FinTech Platform</h5>
+
+    <div class="pra">
+        <p>
+            Led product workflows for a cross-border payments
+            ecosystem supporting utility bill payments,
+            government levies, and multi-vendor API integrations
+            across distributed international teams.
+        </p>
+    </div>
+
+    <a class="button"
+        href="https://kulu.com/en"
+        target="_blank">
+        Visit Website
+    </a>
 </div>
-    <!-- Services section -->
-     <div class="box">
-    <div class="card" data-category="sustainability">
-        <i class="fas fa-recycle"></i>
-        <h5>E-Waste Optimization</h5>
-        <div class="pra">
-            <p>Frameworks for decentralized collection and Waste-to-Energy localization in Indian urban centers[cite: 218].</p>
-        </div>
-        <a class="button" href="https://github.com/dev77-7/R_Script_NYC">View Research</a>
+
+
+
+<!-- =========================================================
+DACIO.AI - MOBILITY ANALYTICS
+One of the strongest industry systems in the portfolio.
+This combines analytics, predictive systems, and mobility tech.
+========================================================= -->
+
+<div class="card"
+    data-category="ai systems data">
+
+    <i class="fas fa-car-crash"></i>
+
+    <h5>Mobility Analytics & Driver Scoring</h5>
+
+    <div class="pra">
+        <p>
+            Built analytics dashboards and behavioral scoring
+            systems for commercial fleet telematics, enabling
+            driving-performance analysis and accident-risk
+            prediction workflows.
+        </p>
     </div>
 
-    <div class="card" data-category="ml">
-        <i class="fas fa-microscope"></i>
-        <h5>Plant Disease CV</h5>
-        <div class="pra">
-            <p>Utilizing CNN architectures and Transfer Learning for automated botanical diagnosis[cite: 236].</p>
-        </div>
-        <a class="button" href="https://github.com/dev77-7/Personal_Trainer">Code Repo</a>
-    </div>
-
-    <div class="card" data-category="systems">
-        <i class="fas fa-charging-station"></i>
-        <h5>EV Traceability</h5>
-        <div class="pra">
-            <p>Economic modeling for Digital Passport Systems and end-of-life battery tracking[cite: 216].</p>
-        </div>
-        <a class="button" href="#">Project Summary</a>
-    </div>
+    <a class="button"
+        href="https://yourstory.com/2025/01/making-roads-safer-dacio-ai-powered-dash-cams-prevent-road-accidents-safety"
+        target="_blank">
+        AutoCar Article
+    </a>
 </div>
-    <div class="service", id="completed-sprint">
-        <div class="title">
-            <h2>Completed Spirints</h2>
-        </div>
-        <div class="box">
-            <div class="card">
-                <i class="fas fa-warehouse"></i>
-                <h5>Inventory Management</h5>
-                <div class="pra">
-                    <p>It is a Django and React based solution for efficient inventory handling, offering ACID property</p>
-                </div>
-                <p style="text-align: center;">
-                    <a class="button" href="https://github.com/dev77-7/inventory_management" target="_blank">GitHub Repo</a>
-                </p>
-            </div>
-            <div class="card">
-                <i class="fas fa-dumbbell"></i>
-                <h5>Gym Trainer</h5>
-                <div class="pra">
-                    <p>Personal Trainer innovates fitness with computer vision, employing Mediapipe for precise, real-time exercise form analysis, enhancing workout efficiency and safety.</p>
-                </div>
-                <p style="text-align: center;">
-                    <a class="button" href="https://github.com/dev77-7/Personal_Trainer" target="_blank">GitHub Repo</a>
-                </p>
-            </div>
-            <div class="card">
-                <i class="fas fa-hippo"></i>
-                <h5>Zoo Management</h5>
-                <div class="pra">
-                    <p>This project is a Java-based application for managing a virtual zoo, featuring classes for different animals and operations to simulate zoo management activities.</p>
-                </div>
-                <p style="text-align: center;">
-                    <a class="button" href="https://github.com/dev77-7/zoo_management_java" target="_blank">GitHub Repo</a>
-                </p>
-            </div>
-            <div class="card">
-                <i class="fas fa-users"></i>
-                <h5>Geospatial Analysis</h5>
-                <div class="pra">
-                    <p>It  harnesses R and Google Maps API for insightful visualization of New York City's crime data, emphasizing advanced mapping and data presentation techniques.</p>
-                </div>
-                <p style="text-align: center;">
-                    <a class="button" href="https://github.com/dev77-7/R_Script_NYC" target="_blank">GitHub Repo</a>
-                </p>
-            </div>
-            <div class="card">
-                <i class="fas fa-users"></i>
-                <h5>Geospatial Analysis</h5>
-                <div class="pra">
-                    <p>It  harnesses R and Google Maps API for insightful visualization of New York City's crime data, emphasizing advanced mapping and data presentation techniques.</p>
-                </div>
-                <p style="text-align: center;">
-                    <a class="button" href="https://github.com/dev77-7/R_Script_NYC" target="_blank">GitHub Repo</a>
-                </p>
-            </div>
-            <div class="card">
-                <i class="fas fa-users"></i>
-                <h5>Geospatial Analysis</h5>
-                <div class="pra">
-                    <p>It  harnesses R and Google Maps API for insightful visualization of New York City's crime data, emphasizing advanced mapping and data presentation techniques.</p>
-                </div>
-                <p style="text-align: center;">
-                    <a class="button" href="https://github.com/dev77-7/R_Script_NYC" target="_blank">GitHub Repo</a>
-                </p>
-            </div>
-            
-        </div>
+
+
+
+<!-- =========================================================
+KITA.PH - AGRITECH CREDIT SCORING
+This is one of the most research-aligned projects because
+it combines agriculture, fintech, and data systems together.
+========================================================= -->
+
+<div class="card"
+    data-category="agritech fintech systems">
+
+    <i class="fas fa-seedling"></i>
+
+    <h5>AgriTech Credit Scoring System</h5>
+
+    <div class="pra">
+        <p>
+            Ran pilot operations for a farmer credit-scoring
+            platform utilizing multidimensional agricultural
+            and financial datasets to support institutional
+            financing ecosystems in the Philippines.
+        </p>
     </div>
 
+    <a class="button"
+        href="https://kita.ph/"
+        target="_blank">
+        Visit Website
+    </a>
+</div>
+
+
+
+<!-- =========================================================
+ADAPTIVE LEARNING / EDTECH SYSTEMS
+Derived from your educational systems and seminar work.
+This helps establish your EdTech research direction.
+========================================================= -->
+
+<div class="card"
+    data-category="edtech systems">
+
+    <i class="fas fa-brain"></i>
+
+    <h5>Adaptive Learning Systems</h5>
+
+    <div class="pra">
+        <p>
+            Worked on scalable educational systems,
+            technical seminar programs, and engagement-driven
+            learning workflows focused on accelerated technical
+            education.
+        </p>
+    </div>
+
+    <a class="button"
+        href="https://internship.learnandbuild.in/"
+        target="_blank">
+        Visit Website
+    </a>
+</div>
+        <!-- =========================================================
+        E-WASTE / CIRCULAR ECONOMY
+        ========================================================= -->
+
+        <div class="card"
+            data-category="sustainability research">
+
+            <i class="fas fa-recycle"></i>
+
+            <h5>E-Waste Optimization</h5>
+
+            <div class="pra">
+                <p>
+                    Research-focused framework exploring decentralized
+                    e-waste collection systems and waste-to-energy
+                    localization models for Indian urban centers.
+                </p>
+            </div>
+
+            <a class="button"
+                href="https://docs.google.com/document/d/1npFkJ39kS6EhwKpqZMOczNEH59aJUEjg_LmVmtSovDo/edit?usp=sharing"
+                target="_blank">
+                View Research
+            </a>
+        </div>
+
+
+        <!-- =========================================================
+        PLANT DISEASE COMPUTER VISION
+        ========================================================= -->
+
+        <div class="card"
+            data-category="ai agritech">
+
+            <i class="fas fa-microscope"></i>
+
+            <h5>Plant Disease CV</h5>
+
+            <div class="pra">
+                <p>
+                    Applied deep learning and transfer learning
+                    techniques for automated plant disease diagnosis
+                    using computer vision workflows.
+                </p>
+            </div>
+
+            <a class="button"
+                href="https://colab.research.google.com/drive/102uIgD28nhSAAwWjdAkCar0kNvXZgkgc?usp=sharing"
+                target="_blank">
+                Collab Notebook
+            </a>
+        </div>
+
+
+        <!-- =========================================================
+        EV TRACEABILITY SYSTEM
+        ========================================================= -->
+
+        <div class="card"
+            data-category="sustainability">
+
+            <i class="fas fa-charging-station"></i>
+
+            <h5>EV Traceability</h5>
+
+            <div class="pra">
+                <p>
+                    Research work focused on digital battery passports,
+                    lifecycle traceability systems, and economic
+                    modeling for EV sustainability ecosystems.
+                </p>
+            </div>
+
+            <a class="button"
+                href="https://docs.google.com/document/d/11VBSenAbRO1QLHsEdq_TubSLIt-t-nhKOpoSmy-mShc/edit?usp=sharing"
+                target="_blank">
+                View Research
+            </a>
+        </div>
+
+
+        <!-- =========================================================
+        INVENTORY MANAGEMENT SYSTEM
+        ========================================================= -->
+
+        <div class="card"
+            data-category="systems">
+
+            <i class="fas fa-warehouse"></i>
+
+            <h5>Inventory Management System</h5>
+
+            <div class="pra">
+                <p>
+                    Django and React based inventory platform designed
+                    around ACID-compliant operations and scalable
+                    backend workflows.
+                </p>
+            </div>
+
+            <a class="button"
+                href="https://github.com/dev77-7/inventory_management"
+                target="_blank">
+                GitHub Repo
+            </a>
+        </div>
+
+
+        <!-- =========================================================
+        COMPUTER VISION FITNESS ANALYSIS
+        ========================================================= -->
+
+        <div class="card"
+            data-category="ai">
+
+            <i class="fas fa-dumbbell"></i>
+
+            <h5>Computer Vision Fitness Analysis</h5>
+
+            <div class="pra">
+                <p>
+                    Built a Mediapipe-powered exercise analysis system
+                    capable of real-time posture tracking and movement
+                    validation for fitness applications.
+                </p>
+            </div>
+
+            <a class="button"
+                href="https://github.com/dev77-7/Personal_Trainer"
+                target="_blank">
+                GitHub Repo
+            </a>
+        </div>
+
+
+        <!-- =========================================================
+        OBJECT-ORIENTED ZOO MANAGEMENT
+        ========================================================= -->
+
+        <div class="card"
+            data-category="systems">
+
+            <i class="fas fa-hippo"></i>
+
+            <h5>Zoo Management System</h5>
+
+            <div class="pra">
+                <p>
+                    Java-based object-oriented application simulating
+                    virtual zoo management operations using modular
+                    class design and entity abstraction.
+                </p>
+            </div>
+
+            <a class="button"
+                href="https://github.com/dev77-7/zoo_management_java"
+                target="_blank">
+                GitHub Repo
+            </a>
+        </div>
+
+
+        <!-- =========================================================
+        GEOSPATIAL ANALYTICS
+        ========================================================= -->
+
+        <div class="card"
+            data-category="data">
+
+            <i class="fas fa-map-marked-alt"></i>
+
+            <h5>Geospatial Crime Analytics</h5>
+
+            <div class="pra">
+                <p>
+                    Utilized R and Google Maps APIs to visualize and
+                    analyze crime distribution patterns across New York
+                    City using spatial data techniques.
+                </p>
+            </div>
+
+            <a class="button"
+                href="https://github.com/dev77-7/R_Script_NYC"
+                target="_blank">
+                GitHub Repo
+            </a>
+        </div>
+
+
+        <!-- =========================================================
+        SPORTS ANALYTICS ML PROJECT
+        ========================================================= -->
+
+        <div class="card"
+            data-category="ai data">
+
+            <i class="fas fa-basketball-ball"></i>
+
+            <h5>Sports Analytics using ML</h5>
+
+            <div class="pra">
+                <p>
+                    Developed predictive machine learning models using
+                    Decision Trees and Random Forests to analyze NBA
+                    player performance and All-Star selection patterns.
+                </p>
+            </div>
+
+            <a class="button"
+                href="https://github.com/dev77-7/Sports-Analytics-using-Ensemble-Machine-Learning"
+                target="_blank">
+                GitHub Repo
+            </a>
+        </div>
+
+    </div>
+
+</section>
     <!-- Contact section -->
     <div class="contact-me">
         <p>For those who appreciate the artistry in web design, this portfolio showcases an exquisite blend of only HTML and CSS, offering a glimpse into the creator's professional prowess. It stands as a stellar example of how minimalist design elements can come together to craft a compelling online presence. Delving into the source code on the GitHub repo could provide valuable insights. Explore the intricacies of this design</p>
