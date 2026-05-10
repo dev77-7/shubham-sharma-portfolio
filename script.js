@@ -66,32 +66,50 @@ class Particle {
     }
 }
 
-// Filtering Function
-function filterSelection(c, btn) {
-    // 1. Handle Card Filtering
-    let cards = document.getElementsByClassName("card");
-    let category = (c === "all") ? "" : c;
+// =========================================================
+// PROJECT FILTERING SYSTEM
+// Projects can belong to multiple categories
+// using the data-category attribute.
+// =========================================================
 
-    for (let i = 0; i < cards.length; i++) {
-        // Safety: Only filter cards that actually have a data-category attribute
-        let itemCategory = cards[i].getAttribute("data-category");
-        
-        if (itemCategory) {
-            cards[i].classList.add("hidden");
-            if (category === "" || itemCategory.indexOf(category) > -1) {
-                cards[i].classList.remove("hidden");
-            }
+function filterSelection(category, btn) {
+
+    // Grab all project cards
+    const cards = document.querySelectorAll(".card");
+    cards.forEach(card => {
+
+        // Read categories from HTML
+        const itemCategory = card.dataset.category || "";
+
+        // Show everything
+        if (category === "all") {
+
+            // IMPORTANT:
+            // Cards use flex layout internally
+            // so we restore them as flex.
+            card.style.display = "flex";
+        } 
+        // Show matching category
+        else if (itemCategory.includes(category)) {
+            card.style.display = "flex";
         }
-        // Cards without data-category (like Completed Sprints) stay visible
-    }
+        
+        // Hide non-matching cards
+        else {
+            card.style.display = "none";
+        }
+    });
 
-    // 2. Handle Button Active State
-    let btns = document.getElementsByClassName("filter-btn");
-    for (let i = 0; i < btns.length; i++) {
-        btns[i].classList.remove("active");
-    }
+    // =====================================================
+    // ACTIVE FILTER BUTTON STYLING
+    // =====================================================
 
-    // Add 'active' to the specific button clicked
+    const buttons = document.querySelectorAll(".filter-btn");
+    buttons.forEach(button => {
+        button.classList.remove("active");
+    });
+
+    // Highlight currently selected button
     if (btn) {
         btn.classList.add("active");
     }
